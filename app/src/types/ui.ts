@@ -1,1 +1,1 @@
-export type TextContent = string | string[] | readonly string[];
+export type TextContent = string | readonly string[];
