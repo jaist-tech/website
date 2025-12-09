@@ -4,7 +4,7 @@ import { Heading } from "@/components/shared/Heading";
 import { MultilineText } from "@/components/shared/MultilineText";
 
 type Props = {
-  title: TextContent;
+  title: string;
   about: TextContent;
 };
 
@@ -15,7 +15,7 @@ export const HeroSection = ({ title, about }: Props) => {
         🚧 WIP 🚧
       </span>
 
-      <Heading level={1} title={title as string} />
+      <Heading level={1} title={title} />
       <MultilineText content={about} />
     </SectionFrame>
   );
