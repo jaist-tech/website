@@ -6,7 +6,7 @@ type Props = {
 export const SectionFrame = ({ children, centered = false }: Props) => {
   const centerClasses = centered
     ? "flex flex-col items-center justify-center text-center"
-    : "flex flex-col";
+    : "flex flex-col max-w-4xl mx-auto";
 
   return (
     <div className={`${centerClasses} gap-4 py-12 px-4`}>
