@@ -5,11 +5,9 @@ const { top } = ja;
 
 export default function Top() {
   return (
-      <main>
-        <HeroSection
-          title={top.welcome}
-          about={top.about}
-        />
-      </main>
+    <HeroSection
+      title={top.welcome}
+      about={top.about}
+    />
   );
 }
