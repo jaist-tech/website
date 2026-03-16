@@ -1,9 +1,18 @@
 import type { Metadata } from "next";
 import { Headers } from "@/components/common/Header";
 import { Footer } from "@/components/common/Footer";
+import { withBasePath } from "@/lib/path";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  icons: {
+    icon: [
+      {
+        url: withBasePath("images/logo_jaist-tech-circle.png"),
+        type: "image/x-icon",
+      },
+    ],
+  },
   title: "JAIST Tech サークル",
   description: "JAIST Tech サークルの公式サイトです！",
 };
