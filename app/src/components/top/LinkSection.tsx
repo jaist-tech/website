@@ -7,7 +7,7 @@ type Props = {
 export const LinkSection = ({ title }: Props) => {
   return (
     <SectionFrame centered>
-      <h2 className="text-2xl font-bold">{title}</h2>
+      <h2 className="text-3xl font-bold">{title}</h2>
       <div className="flex flex-wrap gap-4 justify-center">
         <a
           href="https://x.com/jaist_tech"

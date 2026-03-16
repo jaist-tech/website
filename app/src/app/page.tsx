@@ -15,7 +15,7 @@ export default function Top() {
         about={top.about}
       />
       <SectionFrame>
-        <h2 className="text-2xl font-bold">{top.news}</h2>
+        <h2 className="text-3xl font-bold">{top.news}</h2>
         <a
           className="twitter-timeline"
           data-height={twitterTimelineHeight}
