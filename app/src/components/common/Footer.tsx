@@ -13,7 +13,7 @@ export const Footer = () => {
         北陸先端科学技術大学院大学公式サイト
       </a>
       <Image
-        src={withBasePath("images/logo-jaist.png")}
+        src={withBasePath("images/logo_jaist.png")}
         alt="JAIST Logo"
         width={100}
         height={40}
