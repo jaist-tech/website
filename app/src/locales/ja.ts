@@ -6,6 +6,7 @@ export const ja = {
             "アプリ開発、ハッカソン、AI、電子工作など、楽しみながらスキルを磨いていけるサークルを目指しています！"
         ],
         news: "News",
+        link: "Official Link",
     },
     projects: {
         title: "Projects",
