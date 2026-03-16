@@ -1,3 +1,4 @@
+import { Heading } from "@/components/shared/Heading";
 import { SectionFrame } from "@/components/shared/SectionFrame";
 import Script from "next/script";
 
@@ -10,7 +11,7 @@ const twitterTimelineHeight = 640;
 export const NewsSection = ({ title }: Props) => {
   return (
     <SectionFrame>
-      <h2 className="text-3xl font-bold">{title}</h2>
+      <Heading level={2} title={title} />
       <div className="max-w-3xl mx-auto w-full">
         <a
           className="twitter-timeline"

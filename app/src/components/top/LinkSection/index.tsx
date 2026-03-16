@@ -1,4 +1,5 @@
 import { SimpleIconLink } from "./SimpleIconLink";
+import { Heading } from "@/components/shared/Heading";
 import { SectionFrame } from "@/components/shared/SectionFrame";
 import { siX, siQiita, siGithub } from "simple-icons";
 
@@ -9,7 +10,7 @@ type Props = {
 export const LinkSection = ({ title }: Props) => {
   return (
     <SectionFrame centered>
-      <h2 className="text-3xl font-bold">{title}</h2>
+      <Heading level={2} title={title} />
       <div className="flex flex-wrap gap-4 justify-center">
         <SimpleIconLink
           link="https://x.com/jaist_tech"

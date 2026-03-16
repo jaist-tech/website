@@ -9,7 +9,7 @@ export default function Top() {
   return (
     <>
       <HeroSection
-        title={top.welcome}
+        title={top.title}
         about={top.about}
       />
       <NewsSection title={top.news} />
