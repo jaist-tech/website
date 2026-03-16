@@ -10,7 +10,7 @@ type Props = {
 export const LinkSection = ({ title }: Props) => {
   return (
     <SectionFrame centered>
-      <Heading level={2} title={title} />
+      <Heading level={2}>{title}</Heading>
       <div className="flex flex-wrap gap-4 justify-center">
         <SimpleIconLink
           link="https://x.com/jaist_tech"
