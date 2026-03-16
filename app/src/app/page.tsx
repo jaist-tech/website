@@ -19,6 +19,7 @@ export default function Top() {
         <a
           className="twitter-timeline"
           data-height={twitterTimelineHeight}
+          data-chrome="noheader nofooter"
           href="https://twitter.com/jaist_tech?ref_src=twsrc%5Etfw"
           target="_blank"
           rel="noopener noreferrer"
