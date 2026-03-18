@@ -1,8 +1,36 @@
+import Image from "next/image";
+import Link from "next/link";
+import { withBasePath } from "@/lib/path";
+
 export const Headers = () => {
   return (
-    <header className="w-full h-12 px-4 flex items-center bg-violet-400 shadow-md sticky">
-      {/* ロゴに差し替えるためテキスト仮置き */}
-      <h1>JAIST Tech サークル</h1>
+    <header className="fixed top-0 left-0 z-50 w-full h-12 px-4 flex items-center bg-white shadow-md">
+      <h1>
+        <Link href="/" className="flex items-center gap-2">
+          <Image
+            src={withBasePath("images/logo_jaist-tech-circle.png")}
+            alt="JAIST Tech Circle Logo"
+            width={32}
+            height={32}
+          />
+        </Link>
+      </h1>
+      <div className="ml-auto font-semibold">
+        <nav>
+          <ul className="flex gap-4">
+            <li>
+              <Link href="/projects" className="text-gray-700 hover:text-cyan-500 transition-colors">
+                🚀  Projects
+              </Link>
+            </li>
+            <li>
+              <Link href="/#news" className="text-gray-700 hover:text-cyan-500 transition-colors">
+                📰  News
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 };

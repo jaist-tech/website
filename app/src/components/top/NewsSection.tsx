@@ -10,7 +10,7 @@ const twitterTimelineHeight = 640;
 
 export const NewsSection = ({ title }: Props) => {
   return (
-    <SectionFrame>
+    <SectionFrame id="news">
       <Heading level={2}>{title}</Heading>
       <div className="max-w-3xl mx-auto w-full">
         <a
