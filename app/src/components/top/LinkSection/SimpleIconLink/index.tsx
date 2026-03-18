@@ -12,7 +12,7 @@ export const SimpleIconLink = ({ link, icon }: Props) => {
       target="_blank"
       rel="noopener noreferrer"
       className="
-        group inline-flex w-32 items-center justify-center gap-2 px-6 py-3 text-white rounded-lg 
+        group grid w-full place-items-center gap-2 px-6 py-3 text-white rounded-lg 
         hover:opacity-70 transition-opacity
       "
       style={{ backgroundColor: `#${icon.hex}` }}

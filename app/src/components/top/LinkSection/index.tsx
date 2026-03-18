@@ -11,7 +11,8 @@ export const LinkSection = ({ title }: Props) => {
   return (
     <SectionFrame centered>
       <Heading level={2}>{title}</Heading>
-      <div className="flex flex-wrap gap-4 justify-center">
+
+      <div className="grid grid-cols-3 w-full gap-4 max-w-xl">
         <SimpleIconLink
           link="https://x.com/jaist_tech"
           icon={siX}
