@@ -11,5 +11,8 @@ export const ja = {
     },
     projects: {
         title: "Projects",
-    }
+    },
+    footer: {
+        jaistOfficial: "北陸先端科学技術大学院大学公式サイト",
+    },
 } as const;

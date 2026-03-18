@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { withBasePath } from "@/lib/path";
 
+import { ja } from "@/locales/ja";
+
 export const Footer = () => {
   return (
     <footer className="w-full mt-8 pt-8 pb-2 flex flex-col items-center justify-center gap-2 bg-violet-950">
@@ -10,7 +12,7 @@ export const Footer = () => {
         rel="noopener noreferrer"
         className="text-sm text-gray-100 hover:underline hover:text-cyan-500 transition-colors"
       >
-        北陸先端科学技術大学院大学公式サイト
+        {ja.footer.jaistOfficial}
       </a>
       <Image
         src={withBasePath("images/logo_jaist.png")}

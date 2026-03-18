@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Headers } from "@/components/common/Header";
 import { Footer } from "@/components/common/Footer";
 import { withBasePath } from "@/lib/path";
+
+import { ja } from "@/locales/ja";
+
 import "./globals.css";
 
 export const metadata: Metadata = {
