@@ -13,7 +13,7 @@ export const ProjectCard = ({ project }: Props) => {
   return (
     <div className="relative flex flex-col w-full border border-violet-400 bg-violet-100 rounded-lg shadow-md">
       <CategoryTag category={project.category} />
-      <figure className="w-full text-center text-7xl py-5">
+      <figure className="w-full text-center text-7xl py-5 select-none">
         {project.iconEmoji}
       </figure>
       <div className="flex h-full flex-col bg-white rounded-b-lg py-3 px-5">
