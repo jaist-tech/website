@@ -1,13 +1,20 @@
 
+import { ProjectCard } from "@/components/projects/ProjectCard";
+import { Heading } from "@/components/shared/Heading";
 import { SectionFrame } from "@/components/shared/SectionFrame";
+import { projects as projectsData } from "@/data/projects";
 import { ja } from "@/locales/ja";
 
-const { projects } = ja;
+const { projects: projectsLabel } = ja;
 
 export default function Page() {
   return (
       <SectionFrame>
-        <h1 className="text-3xl font-bold mb-4">{projects.title}</h1>
+        <Heading level={1}>{projectsLabel.title}</Heading>
+        
+        {projectsData.map((project) => (
+          <ProjectCard key={project.id} project={project} />
+        ))}
       </SectionFrame>
   );
 }
