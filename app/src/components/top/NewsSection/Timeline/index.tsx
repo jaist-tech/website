@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const timelineHeight = 640;
 const widgetsScriptId = "twitter-wjs";
@@ -69,6 +69,8 @@ const loadTwitterWidgets = (): Promise<TwitterWidgets> => {
 
 export const Timeline = () => {
   const timelineContainerRef = useRef<HTMLDivElement>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
     let isMounted = true;
@@ -86,8 +88,19 @@ export const Timeline = () => {
         }
 
         await twttr.widgets.load(container);
+        if (!isMounted) {
+          return;
+        }
+
+        setIsLoading(false);
+        setHasError(false);
       } catch {
-        // Keep the anchor fallback text when script loading is blocked.
+        if (!isMounted) {
+          return;
+        }
+
+        setIsLoading(false);
+        setHasError(true);
       }
     };
 
@@ -99,9 +112,27 @@ export const Timeline = () => {
   }, []);
 
   return (
-    <div className="max-w-3xl mx-auto w-full" ref={timelineContainerRef}>
+    <div
+      className="max-w-3xl mx-auto w-full relative"
+      ref={timelineContainerRef}
+      style={{ minHeight: timelineHeight }}
+    >
+      {isLoading && !hasError && (
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 z-10 rounded-2xl border border-slate-200 bg-slate-100 p-5 animate-pulse"
+        >
+          <div className="h-3 w-40 rounded bg-slate-300/80" />
+          <div className="mt-6 h-3 w-full rounded bg-slate-300/80" />
+          <div className="mt-4 h-3 w-5/6 rounded bg-slate-300/80" />
+          <div className="mt-4 h-3 w-2/3 rounded bg-slate-300/80" />
+          <div className="mt-10 h-3 w-full rounded bg-slate-300/80" />
+          <div className="mt-4 h-3 w-4/5 rounded bg-slate-300/80" />
+          <div className="mt-4 h-3 w-3/4 rounded bg-slate-300/80" />
+        </div>
+      )}
       <a
-        className="twitter-timeline"
+        className={`twitter-timeline block ${isLoading && !hasError ? "opacity-0" : "opacity-100"}`}
         data-height={timelineHeight}
         data-width="100%"
         data-chrome="noheader nofooter"
@@ -109,7 +140,7 @@ export const Timeline = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        Tweets by jaist_tech
+        {hasError ? "Tweets by jaist_tech" : <span className="sr-only">Tweets timeline is loading</span>}
       </a>
     </div>
   );
