@@ -6,10 +6,11 @@ import { IconLink } from "./IconLink";
 
 type Props = {
   project: Project;
+  onTagClick?: (tag: string) => void;
 };
 
 
-export const ProjectCard = ({ project }: Props) => {
+export const ProjectCard = ({ project, onTagClick }: Props) => {
   return (
     <div className="relative flex flex-col w-full border border-violet-400 bg-violet-100 rounded-lg shadow-md">
       <CategoryTag category={project.category} />
@@ -21,12 +22,14 @@ export const ProjectCard = ({ project }: Props) => {
 
         <div className="flex flex-wrap gap-2 mb-2">
           {project.tags.map((tag) => (
-            <span
+            <button
               key={tag}
-              className="text-violet-800 text-xs select-none"
+              type="button"
+              className="text-violet-800 text-xs select-none hover:underline hover:text-cyan-500 transition-colors cursor-pointer"
+              onClick={() => onTagClick?.(tag)}
             >
-              #{tag}
-            </span>
+              {`#${tag}`}
+            </button>
           ))}
         </div>
 

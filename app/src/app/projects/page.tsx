@@ -16,6 +16,10 @@ export default function Page() {
   const [searchKeyword, setSearchKeyword] = useState("");
   const [searchInputValue, setSearchInputValue] = useState("");
   const normalizedSearchKeyword = normalizeText(searchKeyword.trim());
+  const applySearchKeyword = (keyword: string) => {
+    setSearchInputValue(keyword);
+    setSearchKeyword(keyword);
+  };
 
   const filteredProjects = useMemo(() => {
     if (!normalizedSearchKeyword) {
@@ -44,7 +48,11 @@ export default function Page() {
       {filteredProjects.length > 0 ? (
         <div className="grid w-full justify-items-start gap-6 mb-3 md:grid-cols-2 lg:grid-cols-3">
           {filteredProjects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
+            <ProjectCard
+              key={project.id}
+              project={project}
+              onTagClick={(tag) => applySearchKeyword(tag)}
+            />
           ))}
         </div>
       ) : (
