@@ -12,7 +12,7 @@ export default function Page() {
       <SectionFrame maxWidth="7xl">
         <Heading level={1}>{projectsLabel.title}</Heading>
 
-        <div className="grid w-full justify-items-start gap-6 mt-3 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid w-full justify-items-start gap-6 my-3 md:grid-cols-2 lg:grid-cols-3">
           {projectsData.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}

@@ -5,8 +5,7 @@ type Props = {
 };
 
 const categoryColorClass: Record<Project["category"], string> = {
-    "WEB App": "bg-blue-600",
-    "Mobile App": "bg-green-600",
+    "Development": "bg-blue-600",
     "Community": "bg-amber-600",
 };
 

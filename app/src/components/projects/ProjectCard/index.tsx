@@ -18,6 +18,18 @@ export const ProjectCard = ({ project }: Props) => {
       </figure>
       <div className="flex h-full flex-col bg-white rounded-b-lg py-3 px-5">
         <p className="text-xl font-semibold mb-1">{project.title}</p>
+
+        <div className="flex flex-wrap gap-2 mb-2">
+          {project.tags.map((tag) => (
+            <span
+              key={tag}
+              className="text-violet-800 text-xs select-none"
+            >
+              #{tag}
+            </span>
+          ))}
+        </div>
+
         <p className="text-sm text-gray-600 mb-1">{project.description}</p>
 
         <div className="mt-auto flex justify-end gap-3">

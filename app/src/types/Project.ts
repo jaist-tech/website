@@ -3,7 +3,8 @@ export type Project = {
     title: string;
     description: string;
     iconEmoji: string;
-    category: "WEB App" | "Mobile App" | "Community";
+    category: "Development" | "Community";
+    tags: string[];
     githubLink?: string;
     siteLink?: string;
     appStoreLink?: string;
