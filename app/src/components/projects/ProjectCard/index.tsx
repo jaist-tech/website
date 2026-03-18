@@ -1,7 +1,8 @@
-import { siGithub } from "simple-icons";
+import { siGithub, siAppstore, siGoogleplay  } from "simple-icons";
 import { Globe } from "lucide-react";
 import { Project } from "@/types/Project";
 import { CategoryTag } from "./CategoryTag.tsx";
+import { IconLink } from "./IconLink";
 
 type Props = {
   project: Project;
@@ -21,22 +22,38 @@ export const ProjectCard = ({ project }: Props) => {
 
         <div className="mt-auto flex justify-end gap-3">
           {project.siteLink && (
-            <a
-              href={project.siteLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-violet-900 hover:text-cyan-500 transition-colors"
-            >
+            <IconLink href={project.siteLink}>
               <Globe className="h-6 w-6 inline-block" />
-            </a>
+            </IconLink>
+          )}
+          {project.appStoreLink && (
+            <IconLink href={project.appStoreLink}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                className="h-6 w-6 inline-block"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path d={siAppstore.path} />
+              </svg>
+            </IconLink>
+          )}
+          {project.googlePlayLink && (
+            <IconLink href={project.googlePlayLink}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                className="h-6 w-6 inline-block"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path d={siGoogleplay.path} />
+              </svg>
+            </IconLink>
           )}
           {project.githubLink && (
-            <a
-              href={project.githubLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-violet-900 hover:text-cyan-500 transition-colors"
-            >
+            <IconLink href={project.githubLink}> 
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -46,7 +63,7 @@ export const ProjectCard = ({ project }: Props) => {
               >
                 <path d={siGithub.path} />
               </svg>
-            </a>
+            </IconLink>
           )}
         </div>
 

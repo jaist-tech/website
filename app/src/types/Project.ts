@@ -7,5 +7,5 @@ export type Project = {
     githubLink?: string;
     siteLink?: string;
     appStoreLink?: string;
-    playStoreLink?: string;
+    googlePlayLink?: string;
 };
