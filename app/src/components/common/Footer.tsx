@@ -19,7 +19,7 @@ export const Footer = () => {
         height={40}
         className="my-2"
       />
-      <p className="text-xs text-gray-100">
+      <p className="text-xs text-gray-100 select-none">
         &copy; 2025-{new Date().getFullYear()} JAIST Tech Circle
       </p>
     </footer>
