@@ -1,14 +1,19 @@
 "use client";
 
+import { useState } from "react";
 import { Search } from "lucide-react";
 
 type Props = {
   value: string;
+  hasChanges: boolean;
   onChange: (value: string) => void;
   onSubmit: () => void;
 };
 
-export const SearchForm = ({ value, onChange, onSubmit }: Props) => {
+export const SearchForm = ({ value, hasChanges, onChange, onSubmit }: Props) => {
+  const [isInputFocused, setIsInputFocused] = useState(false);
+  const shouldShowSubmitButton = hasChanges && isInputFocused;
+
   return (
     <form
       id="search-form"
@@ -28,6 +33,8 @@ export const SearchForm = ({ value, onChange, onSubmit }: Props) => {
         placeholder="キーワードを入力"
         value={value}
         onChange={(event) => onChange(event.target.value)}
+        onFocus={() => setIsInputFocused(true)}
+        onBlur={() => setIsInputFocused(false)}
         onKeyDown={(event) => {
           if (event.key === "Enter" && event.nativeEvent.isComposing) {
             event.preventDefault();
@@ -38,6 +45,21 @@ export const SearchForm = ({ value, onChange, onSubmit }: Props) => {
           focus:outline-none focus:ring-1 focus:ring-cyan-500 transition-color focus:shadow-sm focus:shadow-cyan-100 transition-shadow
         "
       />
+      <button
+        type="button"
+        onClick={onSubmit}
+        onMouseDown={(event) => event.preventDefault()}
+        disabled={!shouldShowSubmitButton}
+        tabIndex={shouldShowSubmitButton ? 0 : -1}
+        aria-hidden={!shouldShowSubmitButton}
+        className={`
+          absolute right-1 top-1/2 -translate-y-1/2 text-xs bg-gray-500 px-3 py-1 rounded-4xl
+          hover:bg-gray-600 text-gray-100 transition-colors transition-opacity duration-200
+          ${shouldShowSubmitButton ? "opacity-100 cursor-pointer" : "opacity-0 pointer-events-none"}
+        `}
+      >
+        Enterで検索
+      </button>
     </form>
   );
 };

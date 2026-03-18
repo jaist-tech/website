@@ -15,10 +15,23 @@ const normalizeText = (value: string) => value.normalize("NFKC").toLocaleLowerCa
 export default function Page() {
   const [searchKeyword, setSearchKeyword] = useState("");
   const [searchInputValue, setSearchInputValue] = useState("");
+  const [hasSearchInputChanges, setHasSearchInputChanges] = useState(false);
   const normalizedSearchKeyword = normalizeText(searchKeyword.trim());
+
+  const handleSearchInputChange = (value: string) => {
+    setSearchInputValue(value);
+    setHasSearchInputChanges(true);
+  };
+
+  const submitSearch = () => {
+    setSearchKeyword(searchInputValue);
+    setHasSearchInputChanges(false);
+  };
+
   const applySearchKeyword = (keyword: string) => {
     setSearchInputValue(keyword);
     setSearchKeyword(keyword);
+    setHasSearchInputChanges(false);
   };
 
   const filteredProjects = useMemo(() => {
@@ -41,8 +54,9 @@ export default function Page() {
 
       <SearchForm
         value={searchInputValue}
-        onChange={setSearchInputValue}
-        onSubmit={() => setSearchKeyword(searchInputValue)}
+        hasChanges={hasSearchInputChanges}
+        onChange={handleSearchInputChange}
+        onSubmit={submitSearch}
       />
 
       {filteredProjects.length > 0 ? (
