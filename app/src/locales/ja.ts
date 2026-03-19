@@ -12,6 +12,9 @@ export const ja = {
     },
     projects: {
         title: "Projects",
+        noResults: "条件に一致するプロジェクトが見つかりませんでした。",
+        searchPlaceholder: "キーワードを入力",
+        searchSubmitLabel: "Enterで検索",
     },
     footer: {
         jaistOfficial: "北陸先端科学技術大学院大学公式サイト",

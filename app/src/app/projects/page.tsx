@@ -60,6 +60,8 @@ export default function Page() {
       <Heading level={1}>{projectsLabel.title}</Heading>
 
       <SearchForm
+        searchPlaceholder={projectsLabel.searchPlaceholder}
+        searchSubmitLabel={projectsLabel.searchSubmitLabel}
         value={searchInputValue}
         hasChanges={hasSearchInputChanges}
         onChange={handleSearchInputChange}
@@ -78,7 +80,7 @@ export default function Page() {
         </div>
       ) : (
         <p className="w-full text-center text-gray-500 py-12">
-          条件に一致するプロジェクトが見つかりませんでした。
+          {projectsLabel.noResults}
         </p>
       )}
     </SectionFrame>

@@ -4,13 +4,15 @@ import { useState } from "react";
 import { Search } from "lucide-react";
 
 type Props = {
+  searchPlaceholder: string;
+  searchSubmitLabel: string;
   value: string;
   hasChanges: boolean;
   onChange: (value: string) => void;
   onSubmit: () => void;
 };
 
-export const SearchForm = ({ value, hasChanges, onChange, onSubmit }: Props) => {
+export const SearchForm = ({ searchPlaceholder, searchSubmitLabel, value, hasChanges, onChange, onSubmit }: Props) => {
   const [isInputFocused, setIsInputFocused] = useState(false);
   const shouldShowSubmitButton = hasChanges && isInputFocused;
 
@@ -30,7 +32,7 @@ export const SearchForm = ({ value, hasChanges, onChange, onSubmit }: Props) => 
         id="input-search-form"
         type="text"
         autoComplete="off"
-        placeholder="キーワードを入力"
+        placeholder={searchPlaceholder}
         value={value}
         onChange={(event) => onChange(event.target.value)}
         onFocus={() => setIsInputFocused(true)}
@@ -58,7 +60,7 @@ export const SearchForm = ({ value, hasChanges, onChange, onSubmit }: Props) => 
           ${shouldShowSubmitButton ? "opacity-100 cursor-pointer" : "opacity-0 pointer-events-none"}
         `}
       >
-        Enterで検索
+        {searchSubmitLabel}
       </button>
     </form>
   );
