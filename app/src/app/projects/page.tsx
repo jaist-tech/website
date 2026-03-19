@@ -20,6 +20,13 @@ export default function Page() {
 
   const handleSearchInputChange = (value: string) => {
     setSearchInputValue(value);
+
+    if (value.trim() === "") {
+      setSearchKeyword("");
+      setHasSearchInputChanges(false);
+      return;
+    }
+
     setHasSearchInputChanges(true);
   };
 
