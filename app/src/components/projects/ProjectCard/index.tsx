@@ -20,7 +20,7 @@ export const ProjectCard = ({ project, onTagClick }: Props) => {
       <div className="flex h-full flex-col bg-white rounded-b-lg py-3 px-5">
         <p className="text-xl font-semibold mb-1">{project.title}</p>
 
-        <div className="flex flex-wrap gap-2 mb-2">
+        <div className="flex flex-wrap gap-x-2 gap-y-1 mb-2">
           {project.tags.map((tag) => (
             <button
               key={tag}
