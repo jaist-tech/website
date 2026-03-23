@@ -1,6 +1,6 @@
 import type { NextConfig } from "next";
 
-const basePath = "/misc/circles/Techcircle";
+const basePath = "/misc/circles/tech";
 
 const nextConfig: NextConfig = {
   output: "export",
