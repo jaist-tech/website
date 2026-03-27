@@ -19,7 +19,7 @@ export const Footer = () => {
         alt="JAIST Logo"
         width={100}
         height={40}
-        className="my-2"
+        className="my-2 select-none"
       />
       <p className="text-xs text-gray-100 select-none">
         &copy; 2025-{new Date().getFullYear()} JAIST Tech Circle
