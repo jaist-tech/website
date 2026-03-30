@@ -4,6 +4,7 @@ export type Project = {
     description: string;
     iconEmoji: string;
     category: "Development" | "Community";
+    date: string;
     tags: string[];
     githubLink?: string;
     siteLink?: string;

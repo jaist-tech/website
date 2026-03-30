@@ -12,11 +12,14 @@ type Props = {
 
 export const ProjectCard = ({ project, onTagClick }: Props) => {
   return (
-    <div className="relative flex flex-col w-full border border-violet-400 bg-violet-100 rounded-lg shadow-md">
-      <CategoryTag category={project.category} />
-      <figure className="w-full text-center text-7xl py-5 select-none">
-        {project.iconEmoji}
-      </figure>
+    <div className="flex flex-col w-full border border-violet-400 bg-violet-100 rounded-lg shadow-md">
+      <div className="relative">
+        <CategoryTag category={project.category} />
+        <figure className="w-full text-center text-7xl py-5 select-none">
+          {project.iconEmoji}
+        </figure>
+        <p className="absolute bottom-1 right-3 text-sm text-gray-600">{project.date}</p>
+      </div>
       <div className="flex h-full flex-col bg-white rounded-b-lg py-3 px-5">
         <p className="text-xl font-semibold mb-1">{project.title}</p>
 
