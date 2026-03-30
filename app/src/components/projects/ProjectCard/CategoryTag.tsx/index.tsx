@@ -5,8 +5,8 @@ type Props = {
 };
 
 const categoryColorClass: Record<Project["category"], string> = {
-    "Development": "bg-blue-600",
-    "Community": "bg-amber-600",
+    "Development": "bg-sky-700",
+    "Community": "bg-red-700",
 };
 
 export const CategoryTag = ({ category }: Props) => {

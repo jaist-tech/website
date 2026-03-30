@@ -1,4 +1,4 @@
-import { siGithub, siAppstore, siGoogleplay  } from "simple-icons";
+import { siGithub, siAppstore, siGoogleplay, siQiita  } from "simple-icons";
 import { Globe } from "lucide-react";
 import { Project } from "@/types/Project";
 import { CategoryTag } from "./CategoryTag.tsx";
@@ -40,12 +40,12 @@ export const ProjectCard = ({ project, onTagClick }: Props) => {
 
         <div className="mt-auto flex justify-end gap-3">
           {project.siteLink && (
-            <IconLink href={project.siteLink}>
+            <IconLink href={project.siteLink} label="Website">
               <Globe className="h-6 w-6 inline-block" />
             </IconLink>
           )}
           {project.appStoreLink && (
-            <IconLink href={project.appStoreLink}>
+            <IconLink href={project.appStoreLink} label="App Store">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -58,7 +58,7 @@ export const ProjectCard = ({ project, onTagClick }: Props) => {
             </IconLink>
           )}
           {project.googlePlayLink && (
-            <IconLink href={project.googlePlayLink}>
+            <IconLink href={project.googlePlayLink} label="Google Play Store">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -71,7 +71,7 @@ export const ProjectCard = ({ project, onTagClick }: Props) => {
             </IconLink>
           )}
           {project.githubLink && (
-            <IconLink href={project.githubLink}> 
+            <IconLink href={project.githubLink} label="GitHub">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -80,6 +80,19 @@ export const ProjectCard = ({ project, onTagClick }: Props) => {
                 aria-hidden="true"
               >
                 <path d={siGithub.path} />
+              </svg>
+            </IconLink>
+          )}
+          {project.qiitaLink && (
+            <IconLink href={project.qiitaLink} label="Qiita"> 
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                className="h-6 w-6 inline-block"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path d={siQiita.path} />
               </svg>
             </IconLink>
           )}
