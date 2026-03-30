@@ -1,4 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@800&display=swap?text=「作りたい」を形にする。");
 @import "tailwindcss";
+
+@theme {
+  --breakpoint-xs: 30rem;
+}
 
 html,
 body {
@@ -10,6 +15,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.chatchphrase {
+  font-family: "Shippori Mincho", serif;
+  font-weight: 800;
+  font-style: normal;
 }
 
 @layer base {

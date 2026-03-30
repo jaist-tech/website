@@ -7,27 +7,34 @@ import { MultilineText } from "@/components/shared/MultilineText";
 import { withBasePath } from "@/lib/path";
 import { HeroBackgroundSlideshow } from "./HeroBackgroundSlideshow";
 
+const HERO_BACKGROUND_IMAGES = ["images/hero_01.png", "images/hero_02.png", "images/hero_03.png", "images/hero_04.png"] as const;
+const HERO_SLIDE_DURATION_MS = 8000;
+
 type Props = {
   title: string;
   about: TextContent;
   chatchphrase: string;
 };
 
-const HERO_BACKGROUND_IMAGES = ["images/hero_01.png", "images/hero_02.png", "images/hero_03.png", "images/hero_04.png"] as const;
-const HERO_SLIDE_DURATION_MS = 8000;
 
 export const HeroSection = ({ title, about, chatchphrase }: Props) => {
   return (
     <SectionFrame centered={true}>
-      <div className="relative w-full grid place-items-center border border-violet-300 border-3 rounded-lg overflow-hidden max-w-4xl py-4">
+      <div className="
+        relative grid place-items-center
+        w-full max-w-4xl py-4
+        border-3 border-violet-300 rounded-lg
+        text-white text-shadow-lg
+        overflow-hidden
+      ">
         <HeroBackgroundSlideshow
           imagePaths={HERO_BACKGROUND_IMAGES}
           slideDurationMs={HERO_SLIDE_DURATION_MS}
         />
 
-        <Heading level={2} className="break-keep text-white text-shadow-lg mt-4">
+        <h2 className="chatchphrase break-keep mt-4 text-2xl xs:text-4xl">
           {chatchphrase}
-        </Heading>
+        </h2>
 
         <Heading level={1}>
           <Image
@@ -41,7 +48,7 @@ export const HeroSection = ({ title, about, chatchphrase }: Props) => {
 
         <MultilineText
           content={about}
-          className="text-center text-xs md:text-sm text-white text-shadow-lg font-bold mb-8"
+          className="text-center text-xs md:text-sm font-bold mb-8"
         />
       </div>
 
