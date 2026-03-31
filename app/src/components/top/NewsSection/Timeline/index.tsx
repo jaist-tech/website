@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 const timelineHeight = 640;
 const widgetsScriptId = "twitter-wjs";
-const widgetsScriptSrc = "https://platform.twitter.com/widgets.js";
+const widgetsScriptSrc = "https://platform.x.com/widgets.js";
 
 type TwitterWidgets = {
   ready: (callback: (widgets: TwitterWidgets) => void) => void;
@@ -138,7 +138,7 @@ export const Timeline = () => {
         data-height={timelineHeight}
         data-width="100%"
         data-chrome="noheader nofooter"
-        href="https://twitter.com/jaist_tech?ref_src=twsrc%5Etfw"
+        href="https://x.com/jaist_tech"
         target="_blank"
         rel="noopener noreferrer"
       >
