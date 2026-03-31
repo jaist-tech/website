@@ -12,10 +12,10 @@ export const MultilineText = ({ content, as: Tag = "p", className }: Props) => {
 
   return (
     <Tag className={className}>
-      {lines.map((line, index) => (
-        <Fragment key={index}>
+      {lines.map((line, i) => (
+        <Fragment key={line}>
           {line}
-          {index < lines.length - 1 && <br />}
+          {i < lines.length - 1 && <br />}
         </Fragment>
       ))}
     </Tag>
