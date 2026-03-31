@@ -18,10 +18,10 @@ const HERO_SLIDE_DURATION_MS = 8000;
 type Props = {
   title: string;
   about: TextContent;
-  chatchphrase: string;
+  catchphrase: string;
 };
 
-export const HeroSection = ({ title, about, chatchphrase }: Props) => {
+export const HeroSection = ({ title, about, catchphrase }: Props) => {
   return (
     <SectionFrame centered={true}>
       <div
@@ -38,8 +38,8 @@ export const HeroSection = ({ title, about, chatchphrase }: Props) => {
           slideDurationMs={HERO_SLIDE_DURATION_MS}
         />
 
-        <h2 className="chatchphrase break-keep mt-4 text-2xl xs:text-4xl">
-          {chatchphrase}
+        <h2 className="catchphrase break-keep mt-4 text-2xl xs:text-4xl">
+          {catchphrase}
         </h2>
 
         <Heading level={1}>

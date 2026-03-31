@@ -12,7 +12,7 @@ export default function Top() {
       <HeroSection
         title={top.title}
         about={top.about}
-        chatchphrase={top.catchphrase}
+        catchphrase={top.catchphrase}
       />
       <ActivitiesSection activitiesContent={top.activities} />
       <NewsSection title={top.news} />
