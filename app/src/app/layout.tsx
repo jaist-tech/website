@@ -1,7 +1,8 @@
-import type { Metadata } from "next";
-import { Headers } from "@/components/common/Header";
 import { Footer } from "@/components/common/Footer";
+import { Headers } from "@/components/common/Header";
 import { withBasePath } from "@/lib/path";
+
+import type { Metadata } from "next";
 
 import "./globals.css";
 

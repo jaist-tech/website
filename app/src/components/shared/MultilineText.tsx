@@ -1,5 +1,6 @@
-import type { TextContent } from "@/types/ui";
 import { Fragment } from "react";
+
+import type { TextContent } from "@/types/ui";
 
 type Props = {
   content: TextContent;

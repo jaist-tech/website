@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+
 import { ProjectCard } from "@/components/projects/ProjectCard";
 import { SearchForm } from "@/components/projects/SearchForm";
 import { Heading } from "@/components/shared/Heading";

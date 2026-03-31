@@ -1,7 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useState } from "react";
+import Image from "next/image";
+
 import { withBasePath } from "@/lib/path";
 
 type Props = {

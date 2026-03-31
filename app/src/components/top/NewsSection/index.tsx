@@ -1,6 +1,7 @@
+import { Timeline } from "./Timeline";
+
 import { Heading } from "@/components/shared/Heading";
 import { SectionFrame } from "@/components/shared/SectionFrame";
-import { Timeline } from "./Timeline";
 
 type Props = {
   title: string;

@@ -1,7 +1,9 @@
-import type { ActivitiesContent } from "@/locales/ja";
-import { SectionFrame } from "@/components/shared/SectionFrame";
-import { Heading } from "@/components/shared/Heading";
 import { EventCard } from "./EventCard";
+
+import { Heading } from "@/components/shared/Heading";
+import { SectionFrame } from "@/components/shared/SectionFrame";
+
+import type { ActivitiesContent } from "@/locales/ja";
 
 type Props = {
   activitiesContent: ActivitiesContent;

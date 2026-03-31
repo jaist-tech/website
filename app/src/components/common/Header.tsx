@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { withBasePath } from "@/lib/path";
 
+import { withBasePath } from "@/lib/path";
 import { ja } from "@/locales/ja";
 
 export const Headers = () => {

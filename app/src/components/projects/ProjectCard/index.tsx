@@ -1,8 +1,10 @@
-import { siGithub, siAppstore, siGoogleplay, siQiita } from "simple-icons";
 import { Globe } from "lucide-react";
-import type { Project } from "@/types/Project";
+import { siAppstore, siGithub, siGoogleplay, siQiita } from "simple-icons";
+
 import { CategoryTag } from "./CategoryTag.tsx";
 import { IconLink } from "./IconLink";
+
+import type { Project } from "@/types/Project";
 
 type Props = {
   project: Project;

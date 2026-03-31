@@ -1,7 +1,9 @@
+import { siGithub, siQiita, siX } from "simple-icons";
+
 import { SimpleIconLink } from "./SimpleIconLink";
+
 import { Heading } from "@/components/shared/Heading";
 import { SectionFrame } from "@/components/shared/SectionFrame";
-import { siX, siQiita, siGithub } from "simple-icons";
 
 type Props = {
   title: string;

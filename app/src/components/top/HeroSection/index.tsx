@@ -1,11 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { TextContent } from "@/types/ui";
-import { SectionFrame } from "@/components/shared/SectionFrame";
+
+import { HeroBackgroundSlideshow } from "./HeroBackgroundSlideshow";
+
 import { Heading } from "@/components/shared/Heading";
 import { MultilineText } from "@/components/shared/MultilineText";
+import { SectionFrame } from "@/components/shared/SectionFrame";
 import { withBasePath } from "@/lib/path";
-import { HeroBackgroundSlideshow } from "./HeroBackgroundSlideshow";
+
+import type { TextContent } from "@/types/ui";
 
 const HERO_BACKGROUND_IMAGES = [
   "images/hero_01.png",

@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { withBasePath } from "@/lib/path";
 
+import { withBasePath } from "@/lib/path";
 import { ja } from "@/locales/ja";
 
 export const Footer = () => {
