@@ -3,7 +3,7 @@ import { GoogleAnalytics } from "@/components/common/GoogleAnalytics";
 import { Headers } from "@/components/common/Header";
 import { withBasePath } from "@/lib/path";
 
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 
 import "./globals.css";
 
@@ -16,8 +16,28 @@ export const metadata: Metadata = {
       },
     ],
   },
-  title: "JAIST Tech サークル",
-  description: "JAIST Tech サークルの公式サイトです！",
+  title: "JAIST Techサークル",
+  description:
+    "北陸先端科学技術大学院大学公認の技術系サークル「JAIST Techサークル」の公式サイト。アプリ開発、ハッカソン、AI、電子工作などを通して、楽しみながらスキルを磨けるコミュニティです。",
+  openGraph: {
+    title: "JAIST Techサークル",
+    description:
+      "北陸先端科学技術大学院大学公認の技術系サークル「JAIST Techサークル」の公式サイト。",
+    images: [
+      {
+        url: "https://www.jaist.ac.jp/misc/circles/tech/ogp/thumbnail.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "活動の様子が描かれたイラスト",
+      },
+    ],
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#ee82ee",
 };
 
 export default function RootLayout({
