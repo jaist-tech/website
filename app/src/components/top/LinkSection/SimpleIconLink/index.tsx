@@ -27,6 +27,7 @@ export const SimpleIconLink = ({ link, icon }: Props) => {
       >
         <path d={icon.path} />
       </svg>
+      <p className="sr-only">{icon.title}</p>
     </a>
   );
 };
