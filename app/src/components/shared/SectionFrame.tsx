@@ -27,7 +27,7 @@ export const SectionFrame = ({
   return (
     <div
       id={id}
-      className={`relative ${centerClasses} ${maxWidthClass} gap-4 py-12 px-4`}
+      className={`relative ${centerClasses} ${maxWidthClass} gap-4 px-4 py-12`}
     >
       {children}
     </div>

@@ -6,7 +6,7 @@ import { ja } from "@/locales/ja";
 
 export const Headers = () => {
   return (
-    <header className="fixed top-0 left-0 z-50 w-full h-12 px-4 flex items-center bg-white shadow-md">
+    <header className="fixed top-0 left-0 z-50 flex h-12 w-full items-center bg-white px-4 shadow-md">
       <h1>
         <Link href="/" className="flex items-center gap-2">
           <Image
@@ -23,7 +23,7 @@ export const Headers = () => {
             <li>
               <Link
                 href="/projects"
-                className="text-gray-700 hover:text-cyan-500 transition-colors"
+                className="text-gray-700 transition-colors hover:text-cyan-500"
               >
                 🚀 {ja.projects.title}
               </Link>
@@ -31,7 +31,7 @@ export const Headers = () => {
             <li>
               <Link
                 href="/#news"
-                className="text-gray-700 hover:text-cyan-500 transition-colors"
+                className="text-gray-700 transition-colors hover:text-cyan-500"
               >
                 📰 {ja.top.news}
               </Link>

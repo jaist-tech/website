@@ -12,7 +12,7 @@ const categoryColorClass: Record<Project["category"], string> = {
 export const CategoryTag = ({ category }: Props) => {
   return (
     <span
-      className={`absolute top-3 left-3 rounded-xl px-2 py-1 text-center text-xs font-bold text-white select-none ${categoryColorClass[category]}`}
+      className={`absolute top-3 left-3 select-none rounded-xl px-2 py-1 text-center font-bold text-white text-xs ${categoryColorClass[category]}`}
     >
       {category}
     </span>

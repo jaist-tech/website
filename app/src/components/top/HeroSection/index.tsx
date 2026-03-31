@@ -27,21 +27,13 @@ type Props = {
 export const HeroSection = ({ title, about, catchphrase }: Props) => {
   return (
     <SectionFrame centered={true}>
-      <div
-        className="
-        relative grid place-items-center
-        w-full max-w-4xl py-4
-        border-3 border-violet-300 rounded-lg
-        text-white text-shadow-lg
-        overflow-hidden
-      "
-      >
+      <div className="relative grid w-full max-w-4xl place-items-center overflow-hidden rounded-lg border-3 border-violet-300 py-4 text-shadow-lg text-white">
         <HeroBackgroundSlideshow
           imagePaths={HERO_BACKGROUND_IMAGES}
           slideDurationMs={HERO_SLIDE_DURATION_MS}
         />
 
-        <h2 className="catchphrase break-keep mt-4 text-2xl xs:text-4xl">
+        <h2 className="catchphrase mt-4 break-keep text-2xl xs:text-4xl">
           {catchphrase}
         </h2>
 
@@ -57,16 +49,13 @@ export const HeroSection = ({ title, about, catchphrase }: Props) => {
 
         <MultilineText
           content={about}
-          className="text-center text-xs md:text-sm font-bold mb-8"
+          className="mb-8 text-center font-bold text-xs md:text-sm"
         />
       </div>
 
       <Link
         href="/projects"
-        className="
-          inline-block mt-6 px-6 py-3 bg-violet-500 text-white font-semibold rounded-lg
-          hover:bg-violet-600 hover:scale-105 hover:shadow-lg transition-colors transition-transform
-        "
+        className="mt-6 inline-block rounded-lg bg-violet-500 px-6 py-3 font-semibold text-white transition-colors transition-transform hover:scale-105 hover:bg-violet-600 hover:shadow-lg"
       >
         プロジェクト一覧ページへ
       </Link>

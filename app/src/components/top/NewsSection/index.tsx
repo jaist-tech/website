@@ -11,7 +11,7 @@ export const NewsSection = ({ title }: Props) => {
   return (
     <SectionFrame id="news">
       <Heading level={2}>{title}</Heading>
-      <div className="max-w-3xl mx-auto w-full">
+      <div className="mx-auto w-full max-w-3xl">
         <Timeline />
       </div>
     </SectionFrame>

@@ -115,14 +115,14 @@ export const Timeline = () => {
 
   return (
     <div
-      className="max-w-3xl mx-auto w-full relative"
+      className="relative mx-auto w-full max-w-3xl"
       ref={timelineContainerRef}
       style={{ minHeight: timelineHeight }}
     >
       {isLoading && !hasError && (
         <div
           aria-hidden="true"
-          className="absolute inset-0 z-10 rounded-2xl border border-slate-200 bg-slate-100 p-5 animate-pulse"
+          className="absolute inset-0 z-10 animate-pulse rounded-2xl border border-slate-200 bg-slate-100 p-5"
         >
           <div className="h-3 w-40 rounded bg-slate-300/80" />
           <div className="mt-6 h-3 w-full rounded bg-slate-300/80" />

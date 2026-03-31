@@ -5,12 +5,12 @@ import { ja } from "@/locales/ja";
 
 export const Footer = () => {
   return (
-    <footer className="w-full mt-8 pt-8 pb-2 flex flex-col items-center justify-center gap-2 bg-violet-950">
+    <footer className="mt-8 flex w-full flex-col items-center justify-center gap-2 bg-violet-950 pt-8 pb-2">
       <a
         href="https://jaist.ac.jp/"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-sm text-gray-100 hover:underline hover:text-cyan-500 transition-colors"
+        className="text-gray-100 text-sm transition-colors hover:text-cyan-500 hover:underline"
       >
         {ja.footer.jaistOfficial}
       </a>
@@ -21,7 +21,7 @@ export const Footer = () => {
         height={40}
         className="my-2 select-none"
       />
-      <p className="text-xs text-gray-100 select-none">
+      <p className="select-none text-gray-100 text-xs">
         &copy; 2025-{new Date().getFullYear()} JAIST Tech Circle
       </p>
     </footer>

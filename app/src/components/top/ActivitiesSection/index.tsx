@@ -17,14 +17,14 @@ export const ActivitiesSection = ({ activitiesContent }: Props) => {
       <Heading level={3}>{activitiesContent.weekly}</Heading>
       <div className="flex flex-col items-center gap-1 text-gray-600">
         <p className="text-gray-600">{activitiesContent.weeklyDetail}</p>
-        <p className="text-violet-500 text-sm">
+        <p className="text-sm text-violet-500">
           {activitiesContent.weeklyNote}
         </p>
       </div>
 
       <Heading level={3}>{activitiesContent.events}</Heading>
-      <div className="grid items-center gap-1 w-full mb-6 text-gray-600 max-w-5xl">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-1 md:px-4">
+      <div className="mb-6 grid w-full max-w-5xl items-center gap-1 text-gray-600">
+        <div className="grid grid-cols-1 gap-4 px-1 md:grid-cols-2 md:px-4">
           <EventCard
             iconEmoji={activitiesContent.sakuraHackathon.iconEmoji}
             title={activitiesContent.sakuraHackathon.title}
@@ -49,7 +49,7 @@ export const ActivitiesSection = ({ activitiesContent }: Props) => {
             date={activitiesContent.lt.date}
             description={activitiesContent.lt.description}
           />
-          <p className="text-sm text-gray-600 col-span-full">
+          <p className="col-span-full text-gray-600 text-sm">
             {activitiesContent.others}
           </p>
         </div>

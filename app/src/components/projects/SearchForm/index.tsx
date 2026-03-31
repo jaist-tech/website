@@ -26,14 +26,14 @@ export const SearchForm = ({
   return (
     <form
       id="search-form"
-      className="relative max-w-4xl mx-auto w-full"
+      className="relative mx-auto w-full max-w-4xl"
       onSubmit={(event) => {
         event.preventDefault();
         onSubmit();
       }}
     >
       <label htmlFor="input-search-form">
-        <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+        <Search className="absolute top-1/2 left-3 -translate-y-1/2 text-gray-400" />
       </label>
       <input
         id="input-search-form"
@@ -49,10 +49,7 @@ export const SearchForm = ({
             event.preventDefault();
           }
         }}
-        className="
-          w-full border border-gray-300 rounded-md pl-12 pr-4 py-2
-          focus:outline-none focus:ring-1 focus:ring-cyan-500 transition-color focus:shadow-sm focus:shadow-cyan-100 transition-shadow
-        "
+        className="w-full rounded-md border border-gray-300 py-2 pr-4 pl-12 transition-color transition-shadow focus:shadow-cyan-100 focus:shadow-sm focus:outline-none focus:ring-1 focus:ring-cyan-500"
       />
       <button
         type="button"
@@ -61,10 +58,7 @@ export const SearchForm = ({
         disabled={!shouldShowSubmitButton}
         tabIndex={shouldShowSubmitButton ? 0 : -1}
         aria-hidden={!shouldShowSubmitButton}
-        className={`
-          absolute right-1 top-1/2 -translate-y-1/2 text-xs bg-gray-500 px-3 py-1 rounded-4xl
-          hover:bg-gray-600 text-gray-100 transition-colors transition-opacity duration-200
-          ${shouldShowSubmitButton ? "opacity-100 cursor-pointer" : "opacity-0 pointer-events-none"}
+        className={`absolute top-1/2 right-1 -translate-y-1/2 rounded-4xl bg-gray-500 px-3 py-1 text-gray-100 text-xs transition-colors transition-opacity duration-200 hover:bg-gray-600 ${shouldShowSubmitButton ? "cursor-pointer opacity-100" : "pointer-events-none opacity-0"}
         `}
       >
         {searchSubmitLabel}
