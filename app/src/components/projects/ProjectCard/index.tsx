@@ -1,6 +1,6 @@
 import { siGithub, siAppstore, siGoogleplay, siQiita } from "simple-icons";
 import { Globe } from "lucide-react";
-import { Project } from "@/types/Project";
+import type { Project } from "@/types/Project";
 import { CategoryTag } from "./CategoryTag.tsx";
 import { IconLink } from "./IconLink";
 

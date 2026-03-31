@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { TextContent } from "@/types/ui";
+import type { TextContent } from "@/types/ui";
 import { SectionFrame } from "@/components/shared/SectionFrame";
 import { Heading } from "@/components/shared/Heading";
 import { MultilineText } from "@/components/shared/MultilineText";
