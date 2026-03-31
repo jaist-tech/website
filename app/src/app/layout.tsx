@@ -1,4 +1,5 @@
 import { Footer } from "@/components/common/Footer";
+import { GoogleAnalytics } from "@/components/common/GoogleAnalytics";
 import { Headers } from "@/components/common/Header";
 import { withBasePath } from "@/lib/path";
 
@@ -27,6 +28,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className="flex min-h-screen flex-col">
+        {process.env.NODE_ENV === "production" && <GoogleAnalytics />}
         <Headers />
         <main className="flex-1 pt-12">{children}</main>
         <Footer />
