@@ -1,10 +1,11 @@
-import { Project } from "@/types/Project";
+import type { Project } from "@/types/Project";
 
 export const projects: Project[] = [
   {
     id: "game-cell-battle",
     title: "Cell Battle",
-    description: "セル・オートマトンの代表例であるライフゲームのルールをもとに、パターン配置と盤面の自動変化を通じてCPUとの駆け引きを楽しめる対戦型ゲーム。",
+    description:
+      "セル・オートマトンの代表例であるライフゲームのルールをもとに、パターン配置と盤面の自動変化を通じてCPUとの駆け引きを楽しめる対戦型ゲーム。",
     iconEmoji: "🧠",
     category: "Development",
     date: "2026-01",
@@ -15,7 +16,8 @@ export const projects: Project[] = [
   {
     id: "advent-calendar-2025",
     title: "Advent Calendar 2025",
-    description: "JAIST Techサークルによるアドベントカレンダー。技術記事だけでなく、制作、学習記録、研究紹介など、サークル立ち上げ期の多様な取り組みを発信した企画。",
+    description:
+      "JAIST Techサークルによるアドベントカレンダー。技術記事だけでなく、制作、学習記録、研究紹介など、サークル立ち上げ期の多様な取り組みを発信した企画。",
     iconEmoji: "📝",
     category: "Community",
     date: "2025-12",
@@ -25,7 +27,8 @@ export const projects: Project[] = [
   {
     id: "ai-hide-and-seek",
     title: "AIかくれんぼ",
-    description: "OpenCVとYOLOを用いた人物検出AIを相手に、人間だと見破られないよう距離や動きを工夫しながら挑戦する、コンピュータビジョンを活用したゲーム。",
+    description:
+      "OpenCVとYOLOを用いた人物検出AIを相手に、人間だと見破られないよう距離や動きを工夫しながら挑戦する、コンピュータビジョンを活用したゲーム。",
     iconEmoji: "👀",
     category: "Development",
     date: "2025-09",
@@ -35,7 +38,8 @@ export const projects: Project[] = [
   {
     id: "llm-zinro",
     title: "LLM人狼",
-    description: "ローカルLLMをNPCプレイヤーとして用い、役職に応じた議論・推理・投票を通じてユーザーが対話形式で参加できるワンナイト人狼ゲーム。",
+    description:
+      "ローカルLLMをNPCプレイヤーとして用い、役職に応じた議論・推理・投票を通じてユーザーが対話形式で参加できるワンナイト人狼ゲーム。",
     iconEmoji: "🐺",
     category: "Development",
     date: "2025-09",
@@ -46,7 +50,8 @@ export const projects: Project[] = [
   {
     id: "tsp-duel",
     title: "最短経路ゲーム",
-    description: "巡回セールスマン問題を題材にして、複数の地点の巡り方を考えながら、プレイヤーの直感とアルゴリズムの解で最短経路を競うゲーム。",
+    description:
+      "巡回セールスマン問題を題材にして、複数の地点の巡り方を考えながら、プレイヤーの直感とアルゴリズムの解で最短経路を競うゲーム。",
     iconEmoji: "🛣️",
     category: "Development",
     date: "2025-09",
@@ -56,7 +61,8 @@ export const projects: Project[] = [
   {
     id: "graph-view-page",
     title: "講義依存関係グラフ",
-    description: "大学のシラバス情報から講義同士の依存関係をグラフで可視化し、どの順序で受講すべきか・どの講義を事前に受けておくべきかを分かりやすくするツール。",
+    description:
+      "大学のシラバス情報から講義同士の依存関係をグラフで可視化し、どの順序で受講すべきか・どの講義を事前に受けておくべきかを分かりやすくするツール。",
     iconEmoji: "🏫",
     category: "Development",
     date: "2025-06",
@@ -67,12 +73,13 @@ export const projects: Project[] = [
   {
     id: "bus-dx-timetable",
     title: "BusDX: JAISTバス案内",
-    description: "JAISTと主要駅・空港を結ぶ複数の交通手段をまとめて検索し、時刻表や地図を一体的に表示することで移動計画を立てやすくする交通ナビゲーションツール。",
+    description:
+      "JAISTと主要駅・空港を結ぶ複数の交通手段をまとめて検索し、時刻表や地図を一体的に表示することで移動計画を立てやすくする交通ナビゲーションツール。",
     iconEmoji: "🚌",
     category: "Development",
     date: "2025-05",
     tags: ["ウェブアプリ", "検索ツール", "地図アプリ"],
     siteLink: "https://jaist-tech.github.io/dx-timetable/",
     githubLink: "https://github.com/jaist-tech/dx-timetable",
-  }
+  },
 ];

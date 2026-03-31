@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+
 import { ProjectCard } from "@/components/projects/ProjectCard";
 import { SearchForm } from "@/components/projects/SearchForm";
 import { Heading } from "@/components/shared/Heading";
@@ -10,7 +11,8 @@ import { ja } from "@/locales/ja";
 
 const { projects: projectsLabel } = ja;
 
-const normalizeText = (value: string) => value.normalize("NFKC").toLocaleLowerCase("ja-JP");
+const normalizeText = (value: string) =>
+  value.normalize("NFKC").toLocaleLowerCase("ja-JP");
 
 export default function Page() {
   const [searchKeyword, setSearchKeyword] = useState("");
@@ -69,7 +71,7 @@ export default function Page() {
       />
 
       {filteredProjects.length > 0 ? (
-        <div className="grid w-full justify-items-start gap-6 mb-3 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mb-3 grid w-full justify-items-start gap-6 md:grid-cols-2 lg:grid-cols-3">
           {filteredProjects.map((project) => (
             <ProjectCard
               key={project.id}
@@ -79,7 +81,7 @@ export default function Page() {
           ))}
         </div>
       ) : (
-        <p className="w-full text-center text-gray-500 py-12">
+        <p className="w-full py-12 text-center text-gray-500">
           {projectsLabel.noResults}
         </p>
       )}

@@ -1,7 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useState } from "react";
+import Image from "next/image";
+
 import { withBasePath } from "@/lib/path";
 
 type Props = {
@@ -23,7 +24,9 @@ export const HeroBackgroundSlideshow = ({
     }
 
     const timer = window.setInterval(() => {
-      setActiveImageIndex((previousIndex) => (previousIndex + 1) % imagePaths.length);
+      setActiveImageIndex(
+        (previousIndex) => (previousIndex + 1) % imagePaths.length,
+      );
     }, slideDurationMs);
 
     return () => window.clearInterval(timer);

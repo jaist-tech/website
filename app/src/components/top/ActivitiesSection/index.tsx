@@ -1,7 +1,9 @@
-import type { ActivitiesContent } from "@/locales/ja";
-import { SectionFrame } from "@/components/shared/SectionFrame"
-import { Heading } from "@/components/shared/Heading";
 import { EventCard } from "./EventCard";
+
+import { Heading } from "@/components/shared/Heading";
+import { SectionFrame } from "@/components/shared/SectionFrame";
+
+import type { ActivitiesContent } from "@/locales/ja";
 
 type Props = {
   activitiesContent: ActivitiesContent;
@@ -15,18 +17,20 @@ export const ActivitiesSection = ({ activitiesContent }: Props) => {
       <Heading level={3}>{activitiesContent.weekly}</Heading>
       <div className="flex flex-col items-center gap-1 text-gray-600">
         <p className="text-gray-600">{activitiesContent.weeklyDetail}</p>
-        <p className="text-violet-500 text-sm">{activitiesContent.weeklyNote}</p>
+        <p className="text-sm text-violet-500">
+          {activitiesContent.weeklyNote}
+        </p>
       </div>
 
       <Heading level={3}>{activitiesContent.events}</Heading>
-      <div className="grid items-center gap-1 w-full mb-6 text-gray-600 max-w-5xl">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-1 md:px-4">
+      <div className="mb-6 grid w-full max-w-5xl items-center gap-1 text-gray-600">
+        <div className="grid grid-cols-1 gap-4 px-1 md:grid-cols-2 md:px-4">
           <EventCard
             iconEmoji={activitiesContent.sakuraHackathon.iconEmoji}
             title={activitiesContent.sakuraHackathon.title}
             date={activitiesContent.sakuraHackathon.date}
             description={activitiesContent.sakuraHackathon.description}
-           />
+          />
           <EventCard
             iconEmoji={activitiesContent.jaistFestival.iconEmoji}
             title={activitiesContent.jaistFestival.title}
@@ -39,13 +43,13 @@ export const ActivitiesSection = ({ activitiesContent }: Props) => {
             date={activitiesContent.snowHackathon.date}
             description={activitiesContent.snowHackathon.description}
           />
-          <EventCard 
+          <EventCard
             iconEmoji={activitiesContent.lt.iconEmoji}
             title={activitiesContent.lt.title}
             date={activitiesContent.lt.date}
             description={activitiesContent.lt.description}
           />
-          <p className="text-sm text-gray-600 col-span-full">
+          <p className="col-span-full text-gray-600 text-sm">
             {activitiesContent.others}
           </p>
         </div>

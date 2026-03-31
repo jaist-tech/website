@@ -1,9 +1,9 @@
-import type { SimpleIcon } from "simple-icons"
+import type { SimpleIcon } from "simple-icons";
 
 type Props = {
   link: string;
   icon: SimpleIcon;
-}
+};
 
 export const SimpleIconLink = ({ link, icon }: Props) => {
   return (
@@ -11,10 +11,7 @@ export const SimpleIconLink = ({ link, icon }: Props) => {
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="
-        group grid w-full place-items-center gap-2 px-6 py-3 text-white rounded-lg 
-        hover:opacity-70 transition-opacity
-      "
+      className="group grid w-full place-items-center gap-2 rounded-lg px-6 py-3 text-white transition-opacity hover:opacity-70"
       style={{ backgroundColor: `#${icon.hex}` }}
       aria-label={icon.title}
     >
@@ -27,6 +24,7 @@ export const SimpleIconLink = ({ link, icon }: Props) => {
       >
         <path d={icon.path} />
       </svg>
+      <p className="sr-only">{icon.title}</p>
     </a>
   );
 };
