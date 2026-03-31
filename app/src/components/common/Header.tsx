@@ -21,13 +21,19 @@ export const Headers = () => {
         <nav>
           <ul className="flex gap-4">
             <li>
-              <Link href="/projects" className="text-gray-700 hover:text-cyan-500 transition-colors">
+              <Link
+                href="/projects"
+                className="text-gray-700 hover:text-cyan-500 transition-colors"
+              >
                 🚀 {ja.projects.title}
               </Link>
             </li>
             <li>
-              <Link href="/#news" className="text-gray-700 hover:text-cyan-500 transition-colors">
-                📰  {ja.top.news}
+              <Link
+                href="/#news"
+                className="text-gray-700 hover:text-cyan-500 transition-colors"
+              >
+                📰 {ja.top.news}
               </Link>
             </li>
           </ul>

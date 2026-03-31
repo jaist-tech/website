@@ -5,7 +5,7 @@ import { siX, siQiita, siGithub } from "simple-icons";
 
 type Props = {
   title: string;
-}
+};
 
 export const LinkSection = ({ title }: Props) => {
   return (
@@ -13,19 +13,13 @@ export const LinkSection = ({ title }: Props) => {
       <Heading level={2}>{title}</Heading>
 
       <div className="grid grid-cols-3 w-full gap-4 max-w-xl">
-        <SimpleIconLink
-          link="https://x.com/jaist_tech"
-          icon={siX}
-        />
+        <SimpleIconLink link="https://x.com/jaist_tech" icon={siX} />
         <SimpleIconLink
           link="https://qiita.com/organizations/jaist-tech"
           icon={siQiita}
         />
-        <SimpleIconLink
-          link="https://github.com/jaist-tech"
-          icon={siGithub}
-        />
+        <SimpleIconLink link="https://github.com/jaist-tech" icon={siGithub} />
       </div>
     </SectionFrame>
-  )
+  );
 };

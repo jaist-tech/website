@@ -45,7 +45,9 @@ const loadTwitterWidgets = (): Promise<TwitterWidgets> => {
       reject(new Error("Failed to load Twitter widgets script."));
     };
 
-    let script = document.getElementById(widgetsScriptId) as HTMLScriptElement | null;
+    let script = document.getElementById(
+      widgetsScriptId,
+    ) as HTMLScriptElement | null;
 
     if (!script) {
       script = document.createElement("script");
@@ -140,7 +142,11 @@ export const Timeline = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        {hasError ? "Tweets by jaist_tech" : <span className="sr-only">Tweets timeline is loading</span>}
+        {hasError ? (
+          "Tweets by jaist_tech"
+        ) : (
+          <span className="sr-only">Tweets timeline is loading</span>
+        )}
       </a>
     </div>
   );

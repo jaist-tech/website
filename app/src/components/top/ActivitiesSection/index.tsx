@@ -1,5 +1,5 @@
 import type { ActivitiesContent } from "@/locales/ja";
-import { SectionFrame } from "@/components/shared/SectionFrame"
+import { SectionFrame } from "@/components/shared/SectionFrame";
 import { Heading } from "@/components/shared/Heading";
 import { EventCard } from "./EventCard";
 
@@ -15,7 +15,9 @@ export const ActivitiesSection = ({ activitiesContent }: Props) => {
       <Heading level={3}>{activitiesContent.weekly}</Heading>
       <div className="flex flex-col items-center gap-1 text-gray-600">
         <p className="text-gray-600">{activitiesContent.weeklyDetail}</p>
-        <p className="text-violet-500 text-sm">{activitiesContent.weeklyNote}</p>
+        <p className="text-violet-500 text-sm">
+          {activitiesContent.weeklyNote}
+        </p>
       </div>
 
       <Heading level={3}>{activitiesContent.events}</Heading>
@@ -26,7 +28,7 @@ export const ActivitiesSection = ({ activitiesContent }: Props) => {
             title={activitiesContent.sakuraHackathon.title}
             date={activitiesContent.sakuraHackathon.date}
             description={activitiesContent.sakuraHackathon.description}
-           />
+          />
           <EventCard
             iconEmoji={activitiesContent.jaistFestival.iconEmoji}
             title={activitiesContent.jaistFestival.title}
@@ -39,7 +41,7 @@ export const ActivitiesSection = ({ activitiesContent }: Props) => {
             date={activitiesContent.snowHackathon.date}
             description={activitiesContent.snowHackathon.description}
           />
-          <EventCard 
+          <EventCard
             iconEmoji={activitiesContent.lt.iconEmoji}
             title={activitiesContent.lt.title}
             date={activitiesContent.lt.date}

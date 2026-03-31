@@ -1,11 +1,10 @@
 import { Heading } from "@/components/shared/Heading";
 import { SectionFrame } from "@/components/shared/SectionFrame";
-import { Timeline } from "./Timeline"
+import { Timeline } from "./Timeline";
 
 type Props = {
   title: string;
 };
-
 
 export const NewsSection = ({ title }: Props) => {
   return (

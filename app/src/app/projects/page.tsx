@@ -10,7 +10,8 @@ import { ja } from "@/locales/ja";
 
 const { projects: projectsLabel } = ja;
 
-const normalizeText = (value: string) => value.normalize("NFKC").toLocaleLowerCase("ja-JP");
+const normalizeText = (value: string) =>
+  value.normalize("NFKC").toLocaleLowerCase("ja-JP");
 
 export default function Page() {
   const [searchKeyword, setSearchKeyword] = useState("");

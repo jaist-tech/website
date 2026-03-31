@@ -16,7 +16,9 @@ export const EventCard = ({ iconEmoji, title, date, description }: Props) => {
       <div className="grid gap-1 col-span-3 p-4 text-left">
         <h4 className="text-lg font-bold">{title}</h4>
         <p className="text-sm font-semibold text-gray-600 ">開催時期: {date}</p>
-        <p className="text-xs text-gray-600 whitespace-pre-line">{normalizeLineBreaks(description)}</p>
+        <p className="text-xs text-gray-600 whitespace-pre-line">
+          {normalizeLineBreaks(description)}
+        </p>
       </div>
     </div>
   );

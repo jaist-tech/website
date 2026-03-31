@@ -1,9 +1,9 @@
-import type { SimpleIcon } from "simple-icons"
+import type { SimpleIcon } from "simple-icons";
 
 type Props = {
   link: string;
   icon: SimpleIcon;
-}
+};
 
 export const SimpleIconLink = ({ link, icon }: Props) => {
   return (

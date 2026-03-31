@@ -7,7 +7,12 @@ import { MultilineText } from "@/components/shared/MultilineText";
 import { withBasePath } from "@/lib/path";
 import { HeroBackgroundSlideshow } from "./HeroBackgroundSlideshow";
 
-const HERO_BACKGROUND_IMAGES = ["images/hero_01.png", "images/hero_02.png", "images/hero_03.png", "images/hero_04.png"] as const;
+const HERO_BACKGROUND_IMAGES = [
+  "images/hero_01.png",
+  "images/hero_02.png",
+  "images/hero_03.png",
+  "images/hero_04.png",
+] as const;
 const HERO_SLIDE_DURATION_MS = 8000;
 
 type Props = {
@@ -16,17 +21,18 @@ type Props = {
   chatchphrase: string;
 };
 
-
 export const HeroSection = ({ title, about, chatchphrase }: Props) => {
   return (
     <SectionFrame centered={true}>
-      <div className="
+      <div
+        className="
         relative grid place-items-center
         w-full max-w-4xl py-4
         border-3 border-violet-300 rounded-lg
         text-white text-shadow-lg
         overflow-hidden
-      ">
+      "
+      >
         <HeroBackgroundSlideshow
           imagePaths={HERO_BACKGROUND_IMAGES}
           slideDurationMs={HERO_SLIDE_DURATION_MS}
@@ -52,7 +58,7 @@ export const HeroSection = ({ title, about, chatchphrase }: Props) => {
         />
       </div>
 
-      <Link 
+      <Link
         href="/projects"
         className="
           inline-block mt-6 px-6 py-3 bg-violet-500 text-white font-semibold rounded-lg
@@ -61,7 +67,6 @@ export const HeroSection = ({ title, about, chatchphrase }: Props) => {
       >
         プロジェクト一覧ページへ
       </Link>
-
     </SectionFrame>
   );
 };

@@ -12,7 +12,14 @@ type Props = {
   onSubmit: () => void;
 };
 
-export const SearchForm = ({ searchPlaceholder, searchSubmitLabel, value, hasChanges, onChange, onSubmit }: Props) => {
+export const SearchForm = ({
+  searchPlaceholder,
+  searchSubmitLabel,
+  value,
+  hasChanges,
+  onChange,
+  onSubmit,
+}: Props) => {
   const [isInputFocused, setIsInputFocused] = useState(false);
   const shouldShowSubmitButton = hasChanges && isInputFocused;
 

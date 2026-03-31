@@ -23,7 +23,9 @@ export const HeroBackgroundSlideshow = ({
     }
 
     const timer = window.setInterval(() => {
-      setActiveImageIndex((previousIndex) => (previousIndex + 1) % imagePaths.length);
+      setActiveImageIndex(
+        (previousIndex) => (previousIndex + 1) % imagePaths.length,
+      );
     }, slideDurationMs);
 
     return () => window.clearInterval(timer);

@@ -4,11 +4,7 @@ type Props = {
   children: React.ReactNode;
 };
 
-export const IconLink = ({
-  href,
-  label,
-  children,
-}: Props) => {
+export const IconLink = ({ href, label, children }: Props) => {
   return (
     <a
       href={href}

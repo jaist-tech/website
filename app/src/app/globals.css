@@ -12,7 +12,9 @@ body {
 }
 
 body {
-  font-family: Helvetica, Arial, "Doroid Sans", "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", sans-serif;
+  font-family:
+    Helvetica, Arial, "Doroid Sans", "メイリオ", Meiryo, "ヒラギノ角ゴ Pro W3",
+    "Hiragino Kaku Gothic Pro", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

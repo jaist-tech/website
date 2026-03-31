@@ -1,4 +1,4 @@
-import { siGithub, siAppstore, siGoogleplay, siQiita  } from "simple-icons";
+import { siGithub, siAppstore, siGoogleplay, siQiita } from "simple-icons";
 import { Globe } from "lucide-react";
 import { Project } from "@/types/Project";
 import { CategoryTag } from "./CategoryTag.tsx";
@@ -9,7 +9,6 @@ type Props = {
   onTagClick?: (tag: string) => void;
 };
 
-
 export const ProjectCard = ({ project, onTagClick }: Props) => {
   return (
     <div className="flex flex-col w-full border border-violet-400 bg-violet-100 rounded-lg shadow-md">
@@ -18,7 +17,9 @@ export const ProjectCard = ({ project, onTagClick }: Props) => {
         <figure className="w-full text-center text-7xl py-5 select-none">
           {project.iconEmoji}
         </figure>
-        <p className="absolute bottom-1 right-3 text-sm text-gray-600">{project.date}</p>
+        <p className="absolute bottom-1 right-3 text-sm text-gray-600">
+          {project.date}
+        </p>
       </div>
       <div className="flex h-full flex-col bg-white rounded-b-lg py-3 px-5">
         <p className="text-xl font-semibold mb-1">{project.title}</p>
@@ -84,7 +85,7 @@ export const ProjectCard = ({ project, onTagClick }: Props) => {
             </IconLink>
           )}
           {project.qiitaLink && (
-            <IconLink href={project.qiitaLink} label="Qiita"> 
+            <IconLink href={project.qiitaLink} label="Qiita">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -97,7 +98,6 @@ export const ProjectCard = ({ project, onTagClick }: Props) => {
             </IconLink>
           )}
         </div>
-
       </div>
     </div>
   );
