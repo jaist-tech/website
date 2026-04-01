@@ -13,7 +13,7 @@ type Props = {
 
 export const ProjectCard = ({ project, onTagClick }: Props) => {
   return (
-    <div className="flex w-full flex-col rounded-lg border border-violet-400 bg-violet-100 shadow-md">
+    <div className="flex w-full flex-col rounded-lg border border-violet-400 bg-violet-100">
       <div className="relative">
         <CategoryTag category={project.category} />
         <figure className="w-full select-none py-5 text-center text-7xl">
