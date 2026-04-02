@@ -55,7 +55,7 @@ export const HeroSection = ({ title, about, catchphrase }: Props) => {
 
       <Link
         href="/projects"
-        className="mt-6 inline-block rounded-lg bg-violet-500 px-6 py-3 font-semibold text-white transition-colors transition-transform hover:scale-105 hover:bg-violet-600 hover:shadow-lg"
+        className="mt-6 inline-block rounded-lg bg-violet-600 px-6 py-3 font-semibold text-white transition-colors transition-transform hover:scale-105 hover:bg-violet-500 hover:shadow-lg active:scale-105 active:bg-violet-500 active:shadow-lg"
       >
         プロジェクト一覧ページへ
       </Link>

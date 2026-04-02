@@ -23,7 +23,7 @@ export const Headers = () => {
             <li>
               <Link
                 href="/projects"
-                className="text-gray-700 transition-colors hover:text-cyan-500"
+                className="text-gray-700 transition-colors hover:text-cyan-500 active:text-cyan-500"
               >
                 🚀 {ja.projects.title}
               </Link>
@@ -31,7 +31,7 @@ export const Headers = () => {
             <li>
               <Link
                 href="/#news"
-                className="text-gray-700 transition-colors hover:text-cyan-500"
+                className="text-gray-700 transition-colors hover:text-cyan-500 active:text-cyan-500"
               >
                 📰 {ja.top.news}
               </Link>

@@ -31,7 +31,7 @@ export const ProjectCard = ({ project, onTagClick }: Props) => {
             <button
               key={tag}
               type="button"
-              className="cursor-pointer select-none text-violet-800 text-xs transition-colors hover:text-cyan-500 hover:underline"
+              className="cursor-pointer select-none text-violet-800 text-xs transition-colors hover:text-cyan-500 hover:underline active:text-cyan-500 active:underline"
               onClick={() => onTagClick?.(tag)}
             >
               {`#${tag}`}

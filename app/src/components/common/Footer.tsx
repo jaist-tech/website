@@ -10,7 +10,7 @@ export const Footer = () => {
         href="https://jaist.ac.jp/"
         target="_blank"
         rel="noopener noreferrer"
-        className="text-gray-100 text-sm transition-colors hover:text-cyan-500 hover:underline"
+        className="text-gray-100 text-sm transition-colors hover:text-cyan-500 hover:underline active:text-cyan-500 active:underline"
       >
         {ja.footer.jaistOfficial}
       </a>

@@ -11,14 +11,14 @@ export const SimpleIconLink = ({ link, icon }: Props) => {
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="group grid w-full place-items-center gap-2 rounded-lg px-6 py-3 text-white transition-opacity hover:opacity-70"
+      className="group grid w-full place-items-center gap-2 rounded-lg px-6 py-3 text-white transition-opacity hover:opacity-70 active:opacity-70"
       style={{ backgroundColor: `#${icon.hex}` }}
       aria-label={icon.title}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
-        className="h-5 w-5 transition-transform duration-200 ease-in-out group-hover:scale-[1.2]"
+        className="h-5 w-5 select-none transition-transform duration-200 ease-in-out group-hover:scale-[1.2] group-active:scale-[1.2]"
         fill="currentColor"
         aria-hidden="true"
       >

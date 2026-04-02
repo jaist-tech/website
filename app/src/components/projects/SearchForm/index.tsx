@@ -58,7 +58,7 @@ export const SearchForm = ({
         disabled={!shouldShowSubmitButton}
         tabIndex={shouldShowSubmitButton ? 0 : -1}
         aria-hidden={!shouldShowSubmitButton}
-        className={`absolute top-1/2 right-1 -translate-y-1/2 rounded-4xl bg-gray-500 px-3 py-1 text-gray-100 text-xs transition-colors transition-opacity duration-200 hover:bg-gray-600 ${shouldShowSubmitButton ? "cursor-pointer opacity-100" : "pointer-events-none opacity-0"}
+        className={`absolute top-1/2 right-1 -translate-y-1/2 rounded-4xl bg-gray-500 px-3 py-1 text-gray-100 text-xs transition-colors transition-opacity duration-200 hover:bg-gray-600 active:bg-gray-600 ${shouldShowSubmitButton ? "cursor-pointer opacity-100" : "pointer-events-none opacity-0"}
         `}
       >
         {searchSubmitLabel}

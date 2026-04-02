@@ -11,7 +11,7 @@ export const IconLink = ({ href, label, children }: Props) => {
       aria-label={label}
       target="_blank"
       rel="noopener noreferrer"
-      className="text-violet-900 transition-colors transition-transform hover:scale-110 hover:text-cyan-500"
+      className="text-violet-900 transition-colors transition-transform hover:scale-110 hover:text-cyan-500 active:scale-110 active:text-cyan-500"
     >
       {children}
     </a>
