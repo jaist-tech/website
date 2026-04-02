@@ -25,7 +25,7 @@ export const metadata: Metadata = {
       "北陸先端科学技術大学院大学公認の技術系サークル「JAIST Techサークル」の公式サイト。",
     images: [
       {
-        url: "https://www.jaist.ac.jp/misc/circles/tech/ogp/thumbnail.jpeg",
+        url: "https://www.jaist.ac.jp/misc/circles/tech/ogp/thumbnail.png",
         width: 1200,
         height: 630,
         alt: "活動の様子が描かれたイラスト",
