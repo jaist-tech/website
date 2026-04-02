@@ -44,10 +44,10 @@ export const ActivitiesSection = ({ activitiesContent }: Props) => {
             description={activitiesContent.snowHackathon.description}
           />
           <EventCard
-            iconEmoji={activitiesContent.lt.iconEmoji}
-            title={activitiesContent.lt.title}
-            date={activitiesContent.lt.date}
-            description={activitiesContent.lt.description}
+            iconEmoji={activitiesContent.studyMeeting.iconEmoji}
+            title={activitiesContent.studyMeeting.title}
+            date={activitiesContent.studyMeeting.date}
+            description={activitiesContent.studyMeeting.description}
           />
           <p className="col-span-full text-gray-600 text-sm">
             {activitiesContent.others}
