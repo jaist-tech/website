@@ -51,7 +51,8 @@ export const HeroBackgroundSlideshow = ({
               alt={`Hero Background ${index + 1}`}
               fill
               priority={index === 0}
-              className={`object-cover object-center brightness-60 transition-transform ease-linear ${isActive ? "scale-105 duration-[8000ms]" : "scale-100 duration-[1200ms]"}`}
+              draggable={false}
+              className={`pointer-events-none select-none object-cover object-center brightness-60 transition-transform ease-linear ${isActive ? "scale-105 duration-[8000ms]" : "scale-100 duration-[1200ms]"}`}
             />
           </div>
         );
