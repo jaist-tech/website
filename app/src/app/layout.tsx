@@ -16,13 +16,13 @@ export const metadata: Metadata = {
       },
     ],
   },
-  title: "JAIST Techサークル",
+  title: "JAIST Tech サークル",
   description:
-    "北陸先端科学技術大学院大学公認の技術系サークル「JAIST Techサークル」の公式サイト。アプリ開発、ハッカソン、AI、電子工作などを通して、楽しみながらスキルを磨けるコミュニティです。",
+    "北陸先端科学技術大学院大学公認の技術系サークル「JAIST Tech サークル」の公式サイト。アプリ開発、ハッカソン、AI、電子工作などを通して、楽しみながらスキルを磨けるコミュニティです。",
   openGraph: {
-    title: "JAIST Techサークル",
+    title: "JAIST Tech サークル",
     description:
-      "北陸先端科学技術大学院大学公認の技術系サークル「JAIST Techサークル」の公式サイト。",
+      "北陸先端科学技術大学院大学公認の技術系サークル「JAIST Tech サークル」の公式サイト。",
     images: [
       {
         url: "https://www.jaist.ac.jp/misc/circles/tech/ogp/thumbnail.png",

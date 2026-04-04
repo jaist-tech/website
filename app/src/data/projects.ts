@@ -17,7 +17,7 @@ export const projects: Project[] = [
     id: "advent-calendar-2025",
     title: "Advent Calendar 2025",
     description:
-      "JAIST Techサークルによるアドベントカレンダー。技術記事だけでなく、制作、学習記録、研究紹介など、サークル立ち上げ期の多様な取り組みを発信した企画。",
+      "JAIST Tech サークルによるアドベントカレンダー。技術記事だけでなく、制作、学習記録、研究紹介など、サークル立ち上げ期の多様な取り組みを発信した企画。",
     iconEmoji: "📝",
     category: "Community",
     date: "2025-12",

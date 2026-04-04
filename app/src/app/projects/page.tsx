@@ -1,90 +1,26 @@
-"use client";
+import { ProjectsPageClient } from "./ProjectsPageClient";
 
-import { useMemo, useState } from "react";
+import type { Metadata } from "next";
 
-import { ProjectCard } from "@/components/projects/ProjectCard";
-import { SearchForm } from "@/components/projects/SearchForm";
-import { Heading } from "@/components/shared/Heading";
-import { SectionFrame } from "@/components/shared/SectionFrame";
-import { projects as projectsData } from "@/data/projects";
-import { ja } from "@/locales/ja";
-
-const { projects: projectsLabel } = ja;
-
-const normalizeText = (value: string) =>
-  value.normalize("NFKC").toLocaleLowerCase("ja-JP");
+export const metadata: Metadata = {
+  title: "Projects | JAIST Tech サークル",
+  description:
+    "JAIST Tech サークルの活動成果をまとめたプロジェクト一覧。サークルメンバーによるアプリ開発、ゲーム開発、コミュニティ活動などを紹介します。",
+  openGraph: {
+    title: "Projects | JAIST Tech サークル",
+    description:
+      "サークルメンバーが手がけた多彩なプロジェクトを掲載。ゲーム開発から実用ツール、コミュニティ活動まで幅広く紹介。",
+    images: [
+      {
+        url: "https://www.jaist.ac.jp/misc/circles/tech/ogp/thumbnail.png",
+        width: 1200,
+        height: 630,
+        alt: "活動の様子が描かれたイラスト",
+      },
+    ],
+  },
+};
 
 export default function Page() {
-  const [searchKeyword, setSearchKeyword] = useState("");
-  const [searchInputValue, setSearchInputValue] = useState("");
-  const [hasSearchInputChanges, setHasSearchInputChanges] = useState(false);
-  const normalizedSearchKeyword = normalizeText(searchKeyword.trim());
-
-  const handleSearchInputChange = (value: string) => {
-    setSearchInputValue(value);
-
-    if (value.trim() === "") {
-      setSearchKeyword("");
-      setHasSearchInputChanges(false);
-      return;
-    }
-
-    setHasSearchInputChanges(true);
-  };
-
-  const submitSearch = () => {
-    setSearchKeyword(searchInputValue);
-    setHasSearchInputChanges(false);
-  };
-
-  const applySearchKeyword = (keyword: string) => {
-    setSearchInputValue(keyword);
-    setSearchKeyword(keyword);
-    setHasSearchInputChanges(false);
-  };
-
-  const filteredProjects = useMemo(() => {
-    if (!normalizedSearchKeyword) {
-      return projectsData;
-    }
-
-    return projectsData.filter((project) => {
-      const searchableText = normalizeText(
-        [project.title, project.description, ...project.tags].join(" "),
-      );
-
-      return searchableText.includes(normalizedSearchKeyword);
-    });
-  }, [normalizedSearchKeyword]);
-
-  return (
-    <SectionFrame maxWidth="7xl">
-      <Heading level={1}>{projectsLabel.title}</Heading>
-
-      <SearchForm
-        searchPlaceholder={projectsLabel.searchPlaceholder}
-        searchSubmitLabel={projectsLabel.searchSubmitLabel}
-        value={searchInputValue}
-        hasChanges={hasSearchInputChanges}
-        onChange={handleSearchInputChange}
-        onSubmit={submitSearch}
-      />
-
-      {filteredProjects.length > 0 ? (
-        <div className="mb-3 grid w-full justify-items-start gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {filteredProjects.map((project) => (
-            <ProjectCard
-              key={project.id}
-              project={project}
-              onTagClick={(tag) => applySearchKeyword(tag)}
-            />
-          ))}
-        </div>
-      ) : (
-        <p className="w-full py-12 text-center text-gray-500">
-          {projectsLabel.noResults}
-        </p>
-      )}
-    </SectionFrame>
-  );
+  return <ProjectsPageClient />;
 }
