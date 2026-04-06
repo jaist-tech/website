@@ -50,8 +50,22 @@ export const ja = {
   projects: {
     title: "Projects",
     noResults: "条件に一致するプロジェクトが見つかりませんでした。",
-    searchPlaceholder: "キーワードを入力",
-    searchSubmitLabel: "Enterで検索",
+    searchForm: {
+      title: "プロジェクト検索",
+      freewordPlaceholder: "キーワードを入力",
+      freewordLabel: "フリーワード",
+      easySearchLabel: "簡単検索",
+      easySearchTryable: "試せる",
+      categoryLabel: "カテゴリ",
+      linkTypeLabel: "リンクの種類",
+      linkTypeWebsiteLabel: "ウェブサイト",
+      linkTypeGithubLabel: "GitHub",
+      linkTypeAppStoreLabel: "App Store",
+      linkTypeGooglePlayLabel: "Google Play",
+      linkTypeQiitaLabel: "Qiita",
+      searchSubmit: "Enterで検索",
+      resetConditions: "検索条件をリセット",
+    },
   },
   footer: {
     jaistOfficial: "北陸先端科学技術大学院大学公式サイト",
@@ -59,3 +73,4 @@ export const ja = {
 } as const;
 
 export type ActivitiesContent = typeof ja.top.activities;
+export type ProjectsSearchFormContent = typeof ja.projects.searchForm;
