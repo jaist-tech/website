@@ -6,7 +6,7 @@ import { ja } from "@/locales/ja";
 
 export const Headers = () => {
   return (
-    <header className="fixed top-0 left-0 z-50 flex h-12 w-full items-center bg-white px-4 shadow-md">
+    <header className="fixed top-0 left-0 z-100 flex h-12 w-full items-center bg-white/80 px-4 shadow-md backdrop-blur-sm">
       <h1>
         <Link href="/" className="flex items-center gap-2">
           <Image

@@ -19,7 +19,7 @@ export const ProjectCard = ({ project, onTagClick }: Props) => {
         <figure className="w-full select-none py-5 text-center text-7xl">
           {project.iconEmoji}
         </figure>
-        <p className="absolute right-3 bottom-1 text-gray-600 text-sm">
+        <p className="absolute right-3 bottom-1 text-sm text-violet-900">
           {project.date}
         </p>
       </div>
