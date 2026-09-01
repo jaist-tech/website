@@ -49,10 +49,10 @@ export const ActivitiesSection = ({ activitiesContent }: Props) => {
             date={activitiesContent.studyMeeting.date}
             description={activitiesContent.studyMeeting.description}
           />
-          <p className="col-span-full text-gray-600 text-sm">
-            {activitiesContent.others}
-          </p>
         </div>
+        <p className="m-auto mt-2 px-4 py-2 font-bold text-lg text-sm">
+          {activitiesContent.others}
+        </p>
       </div>
     </SectionFrame>
   );
